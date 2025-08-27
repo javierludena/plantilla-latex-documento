@@ -1,0 +1,39 @@
+# LaTeX generated files
+*.aux
+*.log
+*.toc
+*.pdf
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdy
+
+# Temporary files
+*~
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# MS Office temporary files
+~$*
+*.docx#
+*.tmp
+
+# Editor files
+.vscode/
+*.sublime-*
