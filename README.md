@@ -198,7 +198,7 @@ Puedes añadir un diagrama de Gantt a tu documento con el siguiente código:
 \thispagestyle{empty}
 \begin{figure}[H]
     \centering
-    \makebox[\paperwidth][c]{\% 
+    \makebox[\paperwidth][c]{% 
     \begin{ganttchart}[
         x unit=1.2cm,
         y unit title=0.6cm,
@@ -257,9 +257,15 @@ Puedes añadir un diagrama de Gantt a tu documento con el siguiente código:
         \ganttlink[link/.style={red}]{m2}{testing}
         \ganttlink[link/.style={gray!50}]{testing}{optim}
         \ganttlink[link/.style={red}]{m3}{deploy}
-    \end{ganttchart}}% 
+    \end{ganttchart}}%
     \caption{Planificación temporal de la Fase 1}
     \label{fig:planificacion}
 \end{figure}
 \end{landscape}
 ```
+
+## Licencia
+
+El código de esta plantilla se distribuye bajo la licencia MIT. Puedes encontrar el texto completo de la licencia en el fichero `LICENSE`.
+
+**Nota sobre las imágenes:** La licencia MIT no se aplica a las imágenes contenidas en la carpeta `images/`. Estas imágenes se utilizan a modo de ejemplo y sus derechos pertenecen a sus respectivos autores.
