@@ -1,19 +1,60 @@
-\chapter{Consilium Implementationis}
+\chapter{Lorem Ipsum}
+\section{Dolor Sit Amet}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam.
+\subsection{Consectetur Adipiscing}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam.
 
-Ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+\subsection{Lorem Ipsum Dolor}
 
-\section{Phases Proiecti}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{figure}[H]
+    \centering
+    \makebox[\paperwidth][c]{
+    \begin{ganttchart}[
+        x unit=1.3cm,
+        y unit title=0.6cm,
+        y unit chart=0.7cm,
+        vgrid={*{10}{draw=black!6}},
+        hgrid={*{1}{draw=black!12}},
+        title height=1,
+        title label font=\footnotesize\bfseries,
+        bar/.style={blue!40, rounded corners=2pt},
+        bar height=0.7,
+        bar label font=\footnotesize,
+        group right shift=0,
+        group height=.5,
+        group peaks width={.2},
+        group label font=\footnotesize\bfseries,
+        group/.style={black!50},
+        milestone/.style={diamond, draw=red!90, fill=red!90},
+        milestone label font=\footnotesize,
+        progress label text={},
+        link/.style={-latex, red, thick},
+        time slot format=simple
+    ]{1}{10}
+        % Título y semanas
+        \gantttitle{Lorem Ipsum}{10} \\
+        \gantttitle{Dolor}{10} \\
+        \gantttitlelist{1,...,10}{1} \\
+        
+        % Fases Principales
+        \ganttgroup{Lorem Ipsum}{1}{5} \\
+        \ganttbar[name=lorem1, bar/.style={fill=blue!20}]{Lorem ipsum dolor sit amet}{1}{2} \\
+        \ganttbar[name=lorem2, bar/.style={fill=blue!20}]{Consectetur adipiscing elit}{3}{4} \\
+        \ganttmilestone[name=m1]{Sed do eiusmod}{5} \\
+        
+        \ganttgroup{Dolor Sit Amet}{6}{10} \\
+        \ganttbar[name=lorem3, bar/.style={fill=green!20}]{Tempor incididunt ut labore}{6}{7} \\
+        \ganttbar[name=lorem4, bar/.style={fill=green!20}]{Et dolore magna aliqua}{8}{9} \\
+        \ganttmilestone[name=m2]{Ut enim ad minim veniam}{10}
 
-Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-
-\subsection{At vero eos et accusamus}
-Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
-
-\subsection{Similique sunt in culpa}
-Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.
-
-\subsection{Cumque nihil impedit}
-Quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
-
-\subsection{Ut et voluptates}
-Repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        % Enlaces entre etapas
+        \ganttlink[link/.style={gray!50}]{lorem1}{lorem2}
+        \ganttlink[link/.style={red}]{m1}{lorem3}
+        \ganttlink[link/.style={gray!50}]{lorem3}{lorem4}
+    \end{ganttchart}}
+    \caption{Lorem ipsum dolor sit amet}
+    \label{fig:planificacion}
+\end{figure}
+\end{landscape}
