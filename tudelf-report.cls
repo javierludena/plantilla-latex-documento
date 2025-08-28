@@ -15,6 +15,9 @@
 \usepackage{fancyhdr}
 \usepackage{tikz}
 \usepackage{ifthen}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage{float}
 
 % Page layout
 \geometry{
@@ -82,18 +85,19 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
-\AddToShipoutPictureBG*{
-  \ifthenelse{\value{page}>1}{
-    \AtPageUpperLeft{
-      \put(\paperwidth-5cm-1cm, -2.5cm){
-        \includegraphics[width=5cm]{images/seriografia.jpg}%
-        \put(0.5cm, 1.5cm){
-            \parbox{4cm}{\centering \color{dark-blue} \small Análisis Funcional \\ \tiny Altia Control Tower -- Acciona Energy}
-        }
-      }
-    }
-  }{}
-}
+% SERIOGRAFIA: Descomenta las líneas siguientes para activar la seriografía en páginas 2+
+% \AddToShipoutPicture{
+%   \ifthenelse{\value{page}>1}{
+%     \AtPageUpperLeft{
+%       \put(\paperwidth-5.75cm, 0cm){
+%         \includegraphics[width=5.5cm, height=4cm]{images/seriografia.jpg}%
+%       }
+%       \put(\paperwidth-4cm, -1.5cm){
+%         \parbox{3.5cm}{\centering \color{dark-blue} \fontsize{10}{12}\selectfont \textbf{\thetitle}}
+%       }
+%     }
+%   }{}
+% }
 
 % Title page
 \renewcommand{\maketitle}{

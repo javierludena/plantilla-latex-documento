@@ -1,9 +1,7 @@
 \begin{tikzpicture}[remember picture, overlay]
-    % Left part
-    \fill[dark-teal] (current page.south west) rectangle ([xshift=0.4\paperwidth]current page.north west);
-    % Right part
-    \node[anchor=north east, inner sep=0pt] at (current page.north east) {
-        \includegraphics[width=0.6\paperwidth, height=\paperheight]{images/cover_background.jpg}
+    % Background image
+    \node[anchor=north west, inner sep=0pt] at (current page.north west) {
+        \includegraphics[width=\paperwidth, height=\paperheight,keepaspectratio=false]{images/cover_background.jpg}
     };
 
     % Logos
@@ -13,14 +11,19 @@
     \node[anchor=south east, inner sep=0pt] at ([xshift=-2.5cm, yshift=2cm]current page.south east) {
         \includegraphics[height=1.5cm]{images/logo_altia_logistic.png}
     };
-    \node[anchor=south west, inner sep=0pt] at ([xshift=2.5cm, yshift=2cm]current page.south west) {
-        \includegraphics[height=1.5cm]{images/logo_cliente.jpg}
-    };
+    % LOGO DEL CLIENTE: Descomenta la línea siguiente y coloca el logo del cliente en images/
+    % Formatos soportados: .png, .jpg, .pdf
+    % Tamaño recomendado: altura máxima 1.2cm
+    % \node[anchor=south west, inner sep=0pt] at ([xshift=2.5cm, yshift=2cm]current page.south west) {
+    %     \includegraphics[height=1.2cm]{images/logo_cliente.jpg}
+    % };
 
-    % Title
-    \node[white, anchor=center, text width=0.8\paperwidth, align=center] at (current page.center) {
+    % Title - positioned in left teal section
+    \node[white, anchor=west, text width=0.35\paperwidth, align=left] at ([xshift=2.5cm]current page.west) {
         {\Huge \fontseries{ub}\selectfont \thetitle} \\
-        \vspace{1cm}
-        {\Large \thesubtitle}
+        \vspace{0.5cm}
+        {\Large \thesubtitle} \\
+        \vspace{0.3cm}
+        {\large \fontseries{b}\selectfont \theauthor}
     };
 \end{tikzpicture}
