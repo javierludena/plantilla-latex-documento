@@ -109,12 +109,7 @@ make all      # Limpia y compila
    ```
 3. **Ajustar el nombre** del archivo si es necesario
 
-#### Otros elementos visuales:
-- **Logo de empresa**: Actualiza `images/ACT.png` con tu logo corporativo
-- **Seriografía**: Cambia `images/seriografia.jpg` por tu patrón de fondo
-- **Fondo de portada**: Actualiza `images/cover_background.jpg` según diseño. El diseño actual de la portada utiliza la imagen como fondo de página completa.
 
-> ⚠️ **IMPORTANTE**: Para propuestas comerciales, siempre incluir el logo del cliente siguiendo los pasos anteriores
 
 ### Modificar estilos
 - Los colores y estilos se definen en `tudelf-report.cls`
