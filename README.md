@@ -24,11 +24,15 @@ Esta plantilla está **diseñada específicamente para propuestas comerciales**,
 4. **Compilar** y trabajar en tu copia independiente
 
 ### Ventajas de usar forks:
-- ✅ Cada documento tiene su propio repositorio
-- ✅ Historial de cambios independiente
-- ✅ Posibilidad de colaboración específica por documento
-- ✅ Versionado limpio por proyecto
-- ✅ Fácil actualización de la plantilla base cuando sea necesario
+- Cada documento tiene su propio repositorio
+- Historial de cambios independiente
+- Posibilidad de colaboración específica por documento
+- Versionado limpio por proyecto
+- Fácil actualización de la plantilla base cuando sea necesario
+
+### Ventajas de usar latex:
+- Formato que puede trabajar IA/Cline no como .word
+- Facilidad para rellenar el texto en secciones y no preocuparse por saltos de línea o visualización, ya que se compila directamente a PDF.
 
 ## Estructura de Directorios
 
@@ -78,6 +82,29 @@ FILE = example-latin
 También debes renombrar el archivo principal `.tex` para que coincida con este nombre.
 
 **Archivo principal de ejemplo:** `example-latin.tex`
+
+## Instalar Make en Windows
+
+Para usar el Makefile en Windows necesitas instalar la herramienta Make.  
+Puedes hacerlo de varias formas:
+
+**Opción A: Usando Chocolatey**  
+1. Instala Chocolatey (si no lo tienes):  
+   Abre PowerShell como administrador y ejecuta:  
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+2. Instala Make:  
+   ```powershell
+   choco install make
+   ```
+
+**Opción B: Usando Git Bash**  
+- Si tienes Git para Windows instalado, puedes usar `make` desde Git Bash.
+
+**Opción C: Usando MinGW**  
+- Descarga MinGW desde http://www.mingw.org/
+- Durante la instalación, selecciona el paquete `mingw32-make`.
 
 ## Compilación
 
@@ -144,7 +171,8 @@ make all      # Limpia y compila
 
 ## Requisitos
 
-- XeLaTeX
+- XeLaTeX (asegúrate de instalar el paquete "xelatex" desde MikTeX Console: ve a "Packages", busca "xelatex" y pulsa "Install")
+- MikTeX: https://miktex.org/download
 - Fuentes Lato (incluidas en `fonts/`)
 - Paquetes LaTeX: fontspec, tikz, babel, geometry, etc.
 
