@@ -1,0 +1,50 @@
+\newpage
+		\thispagestyle{fancy}
+
+		\vspace*{2cm}
+
+		% Título de la página
+		\begin{center}
+			{\Large\textbf{\sffamily\color{dark-blue}CONTROL DE VERSIONES}}
+		\end{center}
+
+		\vspace{1cm}
+
+		% Definición de un nuevo estilo para las cajas de la tabla de versiones
+		\newtcolorbox{versionbox}[2][]{
+			colback=light-grey,
+			colframe=light-grey,
+			boxrule=0pt,
+			arc=0mm,
+			boxsep=5pt,
+			left=15pt,
+			title=#2,
+			coltitle=dark-blue,
+			fonttitle=\bfseries\large,
+			attach boxed title to top left={xshift=15mm, yshift=-3.5mm},
+			boxed title style={empty},
+			#1,
+			underlay={
+				\begin{tcbclipinterior}
+					\fill[light-blue-original] (frame.north west) rectangle ([xshift=8pt]frame.south west);
+				\end{tcbclipinterior}
+			}
+		}
+
+		\begin{versionbox}{VERSIÓN \docversion}
+			\begin{tabularx}{\textwidth}{p{0.25\textwidth}X}
+				\textbf{VERSIÓN} & \docversion \\ 
+			\end{tabularx}
+		\end{versionbox}
+
+		\vspace{1cm}
+
+		\begin{versionbox}{RESPONSABLES}
+			\begin{tabularx}{\textwidth}{p{0.25\textwidth}X}
+				\textbf{ELABORACIÓN} & \docauthor \\ 
+				\textbf{VALIDACIÓN} & \docvalidator \\ 
+			\end{tabularx}
+		\end{versionbox}
+
+		\vspace{1cm}
+

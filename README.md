@@ -102,9 +102,6 @@ Puedes hacerlo de varias formas:
 **Opción B: Usando Git Bash**  
 - Si tienes Git para Windows instalado, puedes usar `make` desde Git Bash.
 
-**Opción C: Usando MinGW**  
-- Descarga MinGW desde http://www.mingw.org/
-- Durante la instalación, selecciona el paquete `mingw32-make`.
 
 ## Compilación
 
@@ -280,7 +277,7 @@ Puedes añadir un diagrama de Gantt a tu documento con el siguiente código:
         \ganttlink[link/.style={red}]{m2}{testing}
         \ganttlink[link/.style={gray!50}]{testing}{optim}
         \ganttlink[link/.style={red}]{m3}{deploy}
-    \end{ganttchart}}%
+    \end{ganttchart}}% 
     \caption{Planificación temporal de la Fase 1}
     \label{fig:planificacion}
 \end{figure}
@@ -292,3 +289,14 @@ Puedes añadir un diagrama de Gantt a tu documento con el siguiente código:
 El código de esta plantilla se distribuye bajo la licencia MIT. Puedes encontrar el texto completo de la licencia en el fichero `LICENSE`.
 
 **Nota sobre las imágenes:** La licencia MIT no se aplica a las imágenes contenidas en la carpeta `images/`. Estas imágenes se utilizan a modo de ejemplo y sus derechos pertenecen a sus respectivos autores.
+
+## Adaptación a Nuevo Diseño (En Progreso)
+
+Actualmente, la plantilla se está adaptando para que coincida con el diseño del documento de referencia (plantilla world altia)
+
+El plan de adaptación incluye los siguientes puntos:
+
+1.  **Rediseñar la página de control de versiones**: Reestructurar `version-control.tex` para que coincida con el nuevo diseño de cajas y títulos con gradiente.
+2.  **Ajustar la paleta de colores**: Definir los nuevos colores (azules y grises) en `tudelf-report.cls` para que coincidan con el documento de referencia.
+
+Este proceso está en curso.

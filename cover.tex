@@ -19,11 +19,9 @@
     % };
 
     % Title - positioned in left teal section
-    \node[white, anchor=west, text width=0.35\paperwidth, align=left] at ([xshift=2.5cm]current page.west) {
-        {\Huge \fontseries{ub}\selectfont \thetitle} \\
-        \vspace{0.5cm}
-        {\Large \thesubtitle} \\
-        \vspace{0.3cm}
-        {\large \fontseries{b}\selectfont \theauthor}
+    \node[white, anchor=west, align=left] at ([xshift=2.5cm]current page.west) {
+        {\fontsize{40}{48}\selectfont \fontseries{ub}\selectfont \thetitle} \\[0.8cm]
+        {\fontsize{20}{24}\selectfont \thesubtitle} \\[1.2cm]
+        {\fontsize{20}{24}\selectfont \clientname}
     };
 \end{tikzpicture}

@@ -18,6 +18,8 @@
 \usepackage{pgfgantt}
 \usepackage{pdflscape}
 \usepackage{float}
+\usepackage[skins]{tcolorbox}
+\usepackage{tabularx}
 
 % Page layout
 \geometry{
@@ -33,7 +35,8 @@
 \definecolor{dark-teal}{HTML}{005f6f}
 \definecolor{dark-blue}{HTML}{002d40}
 \definecolor{light-blue}{HTML}{00a9ce}
-\definecolor{light-grey}{HTML}{f0f0f0}
+\definecolor{light-grey}{HTML}{f5f5f5}
+\definecolor{light-blue-original}{HTML}{00a9ce}
 
 % Fonts
 % Setup for xelatex or lualatex, fonts are in the fonts/ directory
@@ -67,20 +70,48 @@
 \newcommand{\subtitle}[1]{\renewcommand{\thesubtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\theauthor}{#1}}
 \renewcommand{\date}[1]{\renewcommand{\thedate}{#1}}
+\newcommand{\thesupervisor}{}
+\newcommand{\supervisor}[1]{\renewcommand{\thesupervisor}{#1}}
+\newcommand{\thedistribution}{}
+\newcommand{\distribution}[1]{\renewcommand{\thedistribution}{#1}}
+
+% Header and footer
+
+
 
 % Header and footer
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyfoot[R]{\thepage}
+\fancyfoot[C]{\thepage}
 \fancyhead[L]{\includegraphics[height=1.2cm]{images/ACT.png}}
+
+% Seriografia in header
+\fancyhead[R]{\begin{tikzpicture}[remember picture, overlay]
+    
+\node[anchor=north east, inner sep=0pt] at (\paperwidth-2.5cm, -1.5cm) {\includegraphics[width=5.5cm]{images/seriografia.jpg}};
+    
+\node[anchor=north east, inner sep=0pt, text=dark-blue, font=\bfseries, text width=3.5cm, align=center] at (\paperwidth-3.5cm, -2.5cm) {\thetitle};
+\end{tikzpicture}}
 
 % Redefine the 'plain' pagestyle for chapter beginnings
 \fancypagestyle{plain}{
   \fancyhf{}
     \fancyhead[L]{\includegraphics[height=1.2cm]{images/ACT.png}}
-  \fancyfoot[R]{\thepage}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Title page
+
+
+% Redefine the 'plain' pagestyle for chapter beginnings
+\fancypagestyle{plain}{
+  \fancyhf{}
+    \fancyhead[L]{\includegraphics[height=1.2cm]{images/ACT.png}}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
 }
@@ -104,6 +135,23 @@
     \begin{titlepage}
         \input{cover.tex}
     \end{titlepage}
+}
+
+% Box for versioning page
+\newtcolorbox{infobox}[2][]{
+    colback=white,
+    colframe=light-grey,
+    fonttitle=\bfseries,
+    coltitle=white,
+    colbacktitle=dark-blue,
+    title=#2,
+    attach boxed title to top left={yshift=-2mm, xshift=10mm},
+    boxed title style={
+        colframe=dark-blue,
+        boxrule=0pt,
+        arc=2mm,
+    },
+    #1
 }
 
 % Chapter style
