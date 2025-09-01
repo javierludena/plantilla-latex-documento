@@ -158,7 +158,7 @@
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
     {\normalfont\Huge\fontseries{ub}\selectfont\sffamily\color{dark-teal}}
-    {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+    {}{0pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 
 \titleformat{\section}
