@@ -37,3 +37,6 @@ Thumbs.db
 # Editor files
 .vscode/
 *.sublime-*
+
+# Examples folder
+examples/
