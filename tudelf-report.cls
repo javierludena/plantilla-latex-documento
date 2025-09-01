@@ -156,9 +156,10 @@
 
 % Chapter style
 \usepackage{titlesec}
-\titleformat{\chapter}[display]
+% Remove chapter numbering using titlesec
+\titleformat{\chapter}[block]
     {\normalfont\Huge\fontseries{ub}\selectfont\sffamily\color{dark-teal}}
-    {}{0pt}{\Huge}
+    {}{0pt}{}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 
 \titleformat{\section}
