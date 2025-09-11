@@ -39,27 +39,30 @@
 \definecolor{light-blue-original}{HTML}{00a9ce}
 
 % Fonts
-% Setup for xelatex or lualatex, fonts are in the fonts/ directory
-\setmainfont{Lato-Regular.ttf}[
-    Path=./fonts/,
-    Extension=.ttf,
-    UprightFont = Lato-Regular,
-    BoldFont = Lato-Bold,
-    ItalicFont = Lato-Italic,
-    BoldItalicFont = Lato-BoldItalic,
-    FontFace = {ub}{n}{Lato-Black},
-    FontFace = {ub}{it}{Lato-BlackItalic}
-]
-\setsansfont{Lato-Regular.ttf}[
-    Path=./fonts/,
-    Extension=.ttf,
-    UprightFont = Lato-Regular,
-    BoldFont = Lato-Bold,
-    ItalicFont = Lato-Italic,
-    BoldItalicFont = Lato-BoldItalic,
-    FontFace = {ub}{n}{Lato-Black},
-    FontFace = {ub}{it}{Lato-BlackItalic}
-]
+% Use system default fonts for better readability
+% \setmainfont{Lato-Regular.ttf}[
+%     Path=./fonts/,
+%     Extension=.ttf,
+%     UprightFont = Lato-Regular,
+%     BoldFont = Lato-Bold,
+%     ItalicFont = Lato-Italic,
+%     BoldItalicFont = Lato-BoldItalic,
+%     FontFace = {ub}{n}{Lato-Black},
+%     FontFace = {ub}{it}{Lato-BlackItalic}
+% ]
+% \setsansfont{Lato-Regular.ttf}[
+%     Path=./fonts/,
+%     Extension=.ttf,
+%     UprightFont = Lato-Regular,
+%     BoldFont = Lato-Bold,
+%     ItalicFont = Lato-Italic,
+%     BoldItalicFont = Lato-BoldItalic,
+%     FontFace = {ub}{n}{Lato-Black},
+%     FontFace = {ub}{it}{Lato-BlackItalic}
+% ]
+
+% Better line spacing like martinez-otero
+\linespread{1.3}
 
 % Title and author commands
 \newcommand{\thetitle}{}
