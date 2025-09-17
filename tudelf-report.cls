@@ -5,8 +5,8 @@
 
 \usepackage[main=spanish]{babel}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc}  % No needed with XeLaTeX
+% \usepackage[T1]{fontenc}     % No needed with XeLaTeX
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{geometry}
@@ -40,26 +40,26 @@
 
 % Fonts
 % Use system default fonts for better readability
-% \setmainfont{Lato-Regular.ttf}[
-%     Path=./fonts/,
-%     Extension=.ttf,
-%     UprightFont = Lato-Regular,
-%     BoldFont = Lato-Bold,
-%     ItalicFont = Lato-Italic,
-%     BoldItalicFont = Lato-BoldItalic,
-%     FontFace = {ub}{n}{Lato-Black},
-%     FontFace = {ub}{it}{Lato-BlackItalic}
-% ]
-% \setsansfont{Lato-Regular.ttf}[
-%     Path=./fonts/,
-%     Extension=.ttf,
-%     UprightFont = Lato-Regular,
-%     BoldFont = Lato-Bold,
-%     ItalicFont = Lato-Italic,
-%     BoldItalicFont = Lato-BoldItalic,
-%     FontFace = {ub}{n}{Lato-Black},
-%     FontFace = {ub}{it}{Lato-BlackItalic}
-% ]
+\setmainfont{Lato-Regular.ttf}[
+    Path=./fonts/,
+    Extension=.ttf,
+    UprightFont = Lato-Regular,
+    BoldFont = Lato-Bold,
+    ItalicFont = Lato-Italic,
+    BoldItalicFont = Lato-BoldItalic,
+    FontFace = {ub}{n}{Lato-Black},
+    FontFace = {ub}{it}{Lato-BlackItalic}
+]
+\setsansfont{Lato-Regular.ttf}[
+    Path=./fonts/,
+    Extension=.ttf,
+    UprightFont = Lato-Regular,
+    BoldFont = Lato-Bold,
+    ItalicFont = Lato-Italic,
+    BoldItalicFont = Lato-BoldItalic,
+    FontFace = {ub}{n}{Lato-Black},
+    FontFace = {ub}{it}{Lato-BlackItalic}
+]
 
 % Better line spacing like martinez-otero
 \linespread{1.3}
